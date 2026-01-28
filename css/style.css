@@ -1,0 +1,65 @@
+:root{
+  --bg:#f5f7fb; --card:#ffffff; --accent:#0b76ef; --muted:#6b7280;
+  --success:#16a34a; --danger:#ef4444;
+  font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f8fbff 0%,var(--bg) 100%);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.center-screen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+
+.container{padding:1rem; max-width:940px; margin:1rem auto;}
+
+.card{
+  background:var(--card);
+  padding:1.25rem;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(9,30,66,0.08);
+  width:100%;
+}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1rem;max-width:940px;margin:1rem auto}
+h1,h2,h3{margin:0 0 0.75rem 0}
+label{display:block;margin-bottom:0.5rem;font-size:0.95rem}
+input,select,textarea{
+  display:block;width:100%;
+  padding:0.6rem 0.75rem;margin-top:0.25rem;border:1px solid #e6e9ef;border-radius:8px;font-size:1rem;
+}
+.btn{display:inline-block;padding:0.5rem 0.9rem;border-radius:8px;border:0;cursor:pointer;text-decoration:none;color:white}
+.btn.primary{background:var(--accent)}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,118,239,0.12);padding:0.45rem 0.8rem}
+
+.muted{color:var(--muted);font-size:0.9rem}
+.links{margin-top:0.75rem;display:flex;gap:.5rem}
+
+.preview img{max-width:220px;border-radius:8px;display:block;margin-top:0.5rem}
+.hidden{display:none}
+
+/* table */
+.table-wrap{overflow:auto;margin-top:1rem}
+table{width:100%;border-collapse:collapse;font-size:0.95rem}
+th,td{padding:0.6rem 0.5rem;border-bottom:1px solid #f1f3f5;text-align:left}
+
+/* animations */
+@keyframes pop{0%{transform:translateY(12px) scale(.995);opacity:0}100%{transform:none;opacity:1}}
+.animate-pop{animation:pop .36s cubic-bezier(.2,.9,.3,1) both}
+
+/* responsive */
+@media (max-width:640px){
+  .card{padding:1rem;border-radius:10px}
+  .topbar{padding:0 0.5rem}
+}
