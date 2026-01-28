@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carwash System — Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="center-screen">
+    <div class="card animate-pop">
+      <h1>เข้าสู่ระบบ</h1>
+      <form id="loginForm">
+        <label>
+          อีเมล
+          <input type="email" id="email" required placeholder="you@example.com" />
+        </label>
+        <label>
+          รหัสผ่าน
+          <input type="password" id="password" required placeholder="••••••" />
+        </label>
+        <button type="submit" class="btn primary">เข้าสู่ระบบ</button>
+      </form>
+
+      <p class="muted">ยังไม่มีบัญชี? <a href="register.html">สมัครที่นี่</a></p>
+
+      <div class="links">
+        <a id="toWasher" href="washer.html" class="btn ghost" aria-disabled="true">หน้าพนักงาน</a>
+        <a id="toAdmin" href="admin.html" class="btn ghost" aria-disabled="true">หน้าแอดมิน</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
